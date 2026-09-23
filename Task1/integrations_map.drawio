@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="X3HXaGEVIeYLn2m0X_1a">
+    <mxGraphModel dx="1418" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-62" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Менеджер по кредитам" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="311" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-63" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Менеджер фронт-офиса" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-74" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5BF1Esi2S5WgHuj3ty7X-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-75" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-74" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Обращения по депозитам" vertex="1">
+          <mxGeometry relative="1" x="0.1365" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-65" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор кол-центра банка" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-76" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5BF1Esi2S5WgHuj3ty7X-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-77" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-76" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Обращения по депозитам" vertex="1">
+          <mxGeometry relative="1" x="0.1658" y="-4" as="geometry">
+            <mxPoint x="-13" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-67" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Оператор внешнего кол-центра" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-87" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.012;entryY=0.092;entryDx=0;entryDy=0;entryPerimeter=0;" target="5BF1Esi2S5WgHuj3ty7X-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-88" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-87" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Работа со ставками" vertex="1">
+          <mxGeometry relative="1" x="0.0579" y="-2" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-68" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Менеджер по депозитам" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-82" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5BF1Esi2S5WgHuj3ty7X-81">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-83" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-82" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Уведомления" vertex="1">
+          <mxGeometry relative="1" x="-0.3042" y="-2" as="geometry">
+            <mxPoint x="15" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Автоматизированная банковская система" vertex="1">
+          <mxGeometry height="310" width="360" x="570" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-78" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="5BF1Esi2S5WgHuj3ty7X-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Система кол-центра" vertex="1">
+          <mxGeometry height="60" width="120" x="570" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-79" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="5BF1Esi2S5WgHuj3ty7X-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Система партнерского кол-центра" vertex="1">
+          <mxGeometry height="60" width="120" x="570" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-80" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Обращения по депозитам" vertex="1">
+          <mxGeometry height="30" width="100" x="750" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-85" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="5BF1Esi2S5WgHuj3ty7X-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-86" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-85" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Уведомления" vertex="1">
+          <mxGeometry relative="1" x="0.0787" y="-2" as="geometry">
+            <mxPoint x="-4" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="СМС-шлюз" vertex="1">
+          <mxGeometry height="60" width="120" x="1030" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="Телеком-оператор" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-89" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.455;entryDx=0;entryDy=0;entryPerimeter=0;" target="5BF1Esi2S5WgHuj3ty7X-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-90" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-89" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Работа с кредитными рискмми" vertex="1">
+          <mxGeometry relative="1" x="0.1151" y="2" as="geometry">
+            <mxPoint y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-91" edge="1" parent="1" source="5BF1Esi2S5WgHuj3ty7X-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.006;entryY=0.822;entryDx=0;entryDy=0;entryPerimeter=0;" target="5BF1Esi2S5WgHuj3ty7X-69">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BF1Esi2S5WgHuj3ty7X-92" connectable="0" parent="5BF1Esi2S5WgHuj3ty7X-91" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Оформление депозита или кредита" vertex="1">
+          <mxGeometry relative="1" x="0.1442" y="-2" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
