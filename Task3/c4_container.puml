@@ -1,0 +1,59 @@
+@startuml
+title bank_standart_system Container diagram
+
+!include <C4/C4_Container>
+
+Person(client, "client", "Клиент банка")
+Person(deposit_manager, "deposit_manager", "Менеджер по депозитам")
+Person(operator, "operator", "Оператор кол-центра")
+
+System(bank_standart_system, "bank_standart_system", "Система банка Стандарт")
+Container_Boundary(bank_standart_system, "bank_standart_system") {
+    Container(call_centre_system, "call_centre_system", "React.js, Java Spring Boot, PostgreSQL", "Сервис кол-центра")
+    ContainerDb(core_banking_system_db, "core_banking_system_db", "Oracle", "АБС БД")
+    Container(core_banking_system_client, "core_banking_system_client", "Delphi", "АБС клиент")
+    Container(internet_bank, "internet_bank", "ASP.NET MVC 4.5 .NET Framework 4.5, MS SQL", "Интернет-банк")
+    Container(site, "site", "PHP, React.js", "Сайт банка")
+    Container(notifications_service, "notifications_service", "ASP.NET, MS SQL", "Сервис нотификаций")
+    Container(deposit_service, "deposit_service", "ASP.NET, MS SQL", "Сервис депозитов")
+    Container(rates_service, "rates_service", "ASP.NET, MS SQL", "Сервис ставок")
+    ContainerQueue(kafka, "kafka", "kafka", "Брокер сообщений")
+}
+
+Container_Boundary(internet_bank, "Интернет-банк") {
+  Container(ibMono, "ИБ-монолит", "ASP.NET MVC / .NET 4.5", "Платежи, текущие счета, аутентификация; встраивает Deposit SPA")
+  ContainerDb(ibDb, "БД интернет-банка", "MS SQL", "Данные платежей и счетов")
+}
+Container_Boundary(deposit_service, "deposit_service") {
+  Container(deposit_service_app, "deposit_service_app", "ASP.NET", "")
+  ContainerDb(deposit_service_db, "deposit_service_db", "MS SQL", "Данные депозитов и заявок")
+}
+System_Ext(sms_gateway, "sms_gateway", "Шлюз СМС/провайдер")
+System_Ext(cbr_api, "cbr_api", "API Центробанка")
+
+Rel(deposit_service_app, deposit_service_db, "Получение ставки")
+Rel(rates_service, cbr_api, "Данные о депозитах")
+Rel(ibMono, ibDb, "Чтение/запись", "ADO.NET")
+Rel(core_banking_system_client, core_banking_system_db, "Управление данными")
+
+Rel(client, internet_bank, "Просмотр предложений/Подача заявки")
+Rel(client, site, "Просмотр предложений/Подача заявки")
+Rel(operator, call_centre_system, "Работа с заявками")
+Rel(deposit_manager, core_banking_system_client, "Работа с заявками/Создание депозитов")
+
+Rel(site, deposit_service, "Управление заявками")
+Rel(internet_bank, deposit_service, "Управление заявками")
+Rel(core_banking_system_client, deposit_service, "Работа с заявками/Создание депозитов")
+
+Rel(rates_service, core_banking_system_db, "Получение данных о депозитах и кредитах")
+
+Rel(deposit_service, rates_service, "Получение данных о ставках и кредитных рисках")
+Rel(deposit_service, kafka, "События: подача заявки, создание заявки, создание депозита")
+Rel(deposit_service, core_banking_system_db, "Данные о депозитах")
+
+Rel(kafka, call_centre_system, "Событие создания заявки")
+Rel(kafka, notifications_service, "События: подача заявки, создание депозита")
+
+Rel(notifications_service, sms_gateway, "Отправка уведомлений")
+Rel(sms_gateway, client, "Отправка уведомлений")
+@enduml

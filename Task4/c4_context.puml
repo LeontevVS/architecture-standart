@@ -1,0 +1,15 @@
+@startuml
+title bank_standart_system Context diagram
+
+!include <C4/C4_Context>
+
+Person(operator, "operator", "Оператор кол-центра")
+
+System(bank_standart_system, "bank_standart_system", "Система банка Стандарт")
+System_Ext(cbr_api, "cbr_api", "API Центробанка")
+System_Ext(external_call_center, "external_call_center", "Внешний кол-центр")
+
+Rel(operator, bank_standart_system, "Получение ставки")
+Rel(bank_standart_system, cbr_api, "Получение ставки")
+Rel(external_call_center, bank_standart_system, "Получение ставок банка")
+@enduml

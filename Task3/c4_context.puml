@@ -1,0 +1,21 @@
+@startuml
+title bank_standart_system Context diagram
+
+!include <C4/C4_Context>
+
+Person(client, "client", "Клиент банка")
+Person(deposit_manager, "deposit_manager", "Менеджер по депозитам")
+Person(operator, "operator", "Оператор кол-центра")
+
+System(bank_standart_system, "bank_standart_system", "Система банка Стандарт")
+System_Ext(sms_gateway, "sms_gateway", "Шлюз СМС/провайдер")
+System_Ext(cbr_api, "cbr_api", "API Центробанка")
+
+Rel(client, bank_standart_system, "Просмотр предложений/Подача заявки")
+Rel(operator, bank_standart_system, "Работа с заявками")
+Rel(deposit_manager, bank_standart_system, "Работа с заявками/Создание депозитов")
+
+Rel(bank_standart_system, cbr_api, "Получение ставки")
+Rel(bank_standart_system, sms_gateway, "Отправка уведомлений")
+Rel(sms_gateway, client, "Отправка уведомлений")
+@enduml
