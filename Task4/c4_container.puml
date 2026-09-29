@@ -1,0 +1,24 @@
+@startuml
+title bank_standart_system Container diagram
+
+!include <C4/C4_Container>
+
+Person(operator, "operator", "Оператор кол-центра")
+
+System(bank_standart_system, "bank_standart_system", "Система банка Стандарт")
+Container_Boundary(bank_standart_system, "bank_standart_system") {
+    Container(call_centre_system, "call_centre_system", "React.js, Java Spring Boot, PostgreSQL", "Сервис кол-центра")
+    Container(rates_service, "rates_service", "ASP.NET, MS SQL", "Сервис ставок")
+    ContainerQueue(kafka, "kafka", "kafka", "Брокер сообщений")
+}
+
+System_Ext(cbr_api, "cbr_api", "API Центробанка")
+System_Ext(external_call_center, "external_call_center", "Внешний кол-центр")
+
+Rel(operator, call_centre_system, "Получение ставки")
+
+Rel(rates_service, cbr_api, "Получение ставки")
+Rel(rates_service, kafka, "Событие изменения ставки банка")
+Rel(kafka, call_centre_system, "Событие изменения ставки банка")
+Rel(external_call_center, rates_service, "Получение ставок банка")
+@enduml
